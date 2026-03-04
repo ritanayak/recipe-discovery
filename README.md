@@ -39,7 +39,7 @@
 
 1. **Clone the repository**  
    
-   git clone https://github.com/your-username/recipe-discovery-app.git
+   git clone https://github.com/ritanayak/recipe-discovery.git
    
    cd recipe-discovery-app
 
