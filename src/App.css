@@ -1,0 +1,113 @@
+/* Root layout */
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #242424;
+  background-color: #f9f9f9;
+}
+
+/* Reset body */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #242424;
+}
+
+/* Navbar / logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff7043;
+  text-decoration: none;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1em #ff7043aa);
+}
+
+/* Grid container */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;           /* Space between cards */
+  justify-content: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+
+/* Recipe card */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px;        /* All cards same max width */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Card image */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card content */
+.card .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+}
+
+.card .title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242424;
+}
+
+.card .favorite {
+  font-size: 1.2rem;
+  color: red;
+}
+
+/* Spinner container */
+.spinner-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Error message container */
+.error-container {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 1px solid #ff4d4f;
+  border-radius: 8px;
+  background-color: #ffe6e6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    max-width: 45%;   /* Two cards per row on tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 90%;   /* Single card per row on mobile */
+  }
+}
